@@ -11,8 +11,9 @@ import UIKit
 class LoginViewController: UIViewController {
     
     var english = true
+    @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var saveUserNameLabel: UILabel!
-    
+    @IBOutlet weak var imageViewTopConstraint: NSLayoutConstraint!
     @IBAction func loginButtonTouchUpInside(sender: AnyObject) {
         
         if !english {
@@ -33,6 +34,43 @@ class LoginViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
+    
+    func keyboardWillShow(notification: NSNotification) {
+        
+        if let userInfo = notification.userInfo {
+            if let keyboardSize = (userInfo[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
+                
+                if (self.passwordTextField.frame.origin.y + self.passwordTextField.frame.size.height) > (self.view.frame.size.height - keyboardSize.height) {
+                    self.view.layoutIfNeeded()
+                    UIView.animateWithDuration(0.5, animations: {
+                      self.imageViewTopConstraint.constant = -((self.passwordTextField.frame.origin.y + self.passwordTextField.frame.size.height) - (self.view.frame.size.height - keyboardSize.height))
+                        self.view.layoutIfNeeded()
+                    })
+                }
+            }
+        }
+    }
+    
+    func keyboardWillHide(notification: NSNotification) {
+        self.view.layoutIfNeeded()
+        UIView.animateWithDuration(0.5, animations: {
+            self.imageViewTopConstraint.constant = 0
+            self.view.layoutIfNeeded()
+        })
+    }
+    
+    @IBAction func editingDidEndOnExit(sender: AnyObject) {
+        sender.resignFirstResponder()
     }
     
 

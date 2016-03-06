@@ -12,8 +12,10 @@
 		C44E5E631C8B1DD2001716C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C44E5E611C8B1DD2001716C6 /* Main.storyboard */; };
 		C44E5E651C8B1DD2001716C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C44E5E641C8B1DD2001716C6 /* Assets.xcassets */; };
 		C44E5E681C8B1DD2001716C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C44E5E661C8B1DD2001716C6 /* LaunchScreen.storyboard */; };
-		C44E5E701C8B1EB3001716C6 /* iOSLabor07Resources in Resources */ = {isa = PBXBuildFile; fileRef = C44E5E6F1C8B1EB3001716C6 /* iOSLabor07Resources */; };
 		C44E5E721C8B2815001716C6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44E5E711C8B2815001716C6 /* LoginViewController.swift */; };
+		C4CFB5EF1C8C517B0073CB95 /* AUTLogoBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = C4CFB5EC1C8C517B0073CB95 /* AUTLogoBlack.png */; };
+		C4CFB5F01C8C517B0073CB95 /* AUTLogoWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = C4CFB5ED1C8C517B0073CB95 /* AUTLogoWhite.png */; };
+		C4CFB5F11C8C517B0073CB95 /* BMEQBuilding.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C4CFB5EE1C8C517B0073CB95 /* BMEQBuilding.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,8 +26,10 @@
 		C44E5E641C8B1DD2001716C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C44E5E671C8B1DD2001716C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C44E5E691C8B1DD2001716C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C44E5E6F1C8B1EB3001716C6 /* iOSLabor07Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = iOSLabor07Resources; sourceTree = "<group>"; };
 		C44E5E711C8B2815001716C6 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C4CFB5EC1C8C517B0073CB95 /* AUTLogoBlack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AUTLogoBlack.png; path = iOSLabor07Resources/AUTLogoBlack.png; sourceTree = "<group>"; };
+		C4CFB5ED1C8C517B0073CB95 /* AUTLogoWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AUTLogoWhite.png; path = iOSLabor07Resources/AUTLogoWhite.png; sourceTree = "<group>"; };
+		C4CFB5EE1C8C517B0073CB95 /* BMEQBuilding.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = BMEQBuilding.jpg; path = iOSLabor07Resources/BMEQBuilding.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +62,7 @@
 		C44E5E5C1C8B1DD2001716C6 /* iAUT */ = {
 			isa = PBXGroup;
 			children = (
-				C44E5E6F1C8B1EB3001716C6 /* iOSLabor07Resources */,
+				C4CFB5EB1C8C51610073CB95 /* AUTPictures */,
 				C44E5E5D1C8B1DD2001716C6 /* AppDelegate.swift */,
 				C44E5E5F1C8B1DD2001716C6 /* ViewController.swift */,
 				C44E5E611C8B1DD2001716C6 /* Main.storyboard */,
@@ -68,6 +72,16 @@
 				C44E5E711C8B2815001716C6 /* LoginViewController.swift */,
 			);
 			path = iAUT;
+			sourceTree = "<group>";
+		};
+		C4CFB5EB1C8C51610073CB95 /* AUTPictures */ = {
+			isa = PBXGroup;
+			children = (
+				C4CFB5EC1C8C517B0073CB95 /* AUTLogoBlack.png */,
+				C4CFB5ED1C8C517B0073CB95 /* AUTLogoWhite.png */,
+				C4CFB5EE1C8C517B0073CB95 /* BMEQBuilding.jpg */,
+			);
+			name = AUTPictures;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,10 +142,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C44E5E701C8B1EB3001716C6 /* iOSLabor07Resources in Resources */,
 				C44E5E681C8B1DD2001716C6 /* LaunchScreen.storyboard in Resources */,
 				C44E5E651C8B1DD2001716C6 /* Assets.xcassets in Resources */,
+				C4CFB5F11C8C517B0073CB95 /* BMEQBuilding.jpg in Resources */,
 				C44E5E631C8B1DD2001716C6 /* Main.storyboard in Resources */,
+				C4CFB5F01C8C517B0073CB95 /* AUTLogoWhite.png in Resources */,
+				C4CFB5EF1C8C517B0073CB95 /* AUTLogoBlack.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +308,7 @@
 				C44E5E6E1C8B1DD2001716C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

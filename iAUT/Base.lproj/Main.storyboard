@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Login" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jVn-4y-j8H">
-                                <rect key="frame" x="16" y="180" width="288" height="30"/>
+                                <rect key="frame" x="16" y="185" width="288" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="n5x-Bg-4Vq"/>
                                 </constraints>
@@ -27,26 +27,36 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vn9-ZM-tVg">
-                                <rect key="frame" x="16" y="218" width="288" height="30"/>
+                                <rect key="frame" x="16" y="223" width="288" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <action selector="editingDidEndOnExit:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="aH7-V0-Aee"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Save username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LzW-Lg-GMh">
-                                <rect key="frame" x="17" y="256" width="118" height="21"/>
+                                <rect key="frame" x="17" y="261" width="118" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cwt-Df-j0s">
-                                <rect key="frame" x="185" y="251" width="51" height="31"/>
+                                <rect key="frame" x="185" y="256" width="51" height="31"/>
                             </switch>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="57x-kw-4GI">
-                                <rect key="frame" x="104" y="284" width="113" height="30"/>
+                                <rect key="frame" x="104" y="289" width="113" height="30"/>
                                 <state key="normal" title="Switch language"/>
                                 <connections>
                                     <action selector="loginButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7km-ns-vQ7"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AUTLogoBlack.png" translatesAutoresizingMaskIntoConstraints="NO" id="0VB-zv-0xj">
+                                <rect key="frame" x="16" y="20" width="288" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="288" id="0sz-gG-ELh"/>
+                                    <constraint firstAttribute="height" constant="150" id="vYf-BD-5jV"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.94888336489898983" green="0.94888336489898983" blue="0.94888336489898983" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -57,12 +67,14 @@
                             <constraint firstItem="Vn9-ZM-tVg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="B0h-cB-oxf"/>
                             <constraint firstItem="Vn9-ZM-tVg" firstAttribute="width" secondItem="jVn-4y-j8H" secondAttribute="width" id="BC8-Te-8jn"/>
                             <constraint firstItem="jVn-4y-j8H" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ckc-ro-VSs"/>
+                            <constraint firstItem="0VB-zv-0xj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="JbN-aT-qkO"/>
                             <constraint firstItem="Vn9-ZM-tVg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Ofg-LJ-7g5"/>
                             <constraint firstItem="jVn-4y-j8H" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="160" id="OwL-oT-Kfk"/>
                             <constraint firstItem="jVn-4y-j8H" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="QEG-xE-K2H"/>
                             <constraint firstItem="jVn-4y-j8H" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Qub-U1-jFA"/>
                             <constraint firstItem="Cwt-Df-j0s" firstAttribute="leading" secondItem="LzW-Lg-GMh" secondAttribute="trailing" priority="900" constant="50" id="VN0-iM-bve"/>
                             <constraint firstItem="Vn9-ZM-tVg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Waj-cT-8Lj"/>
+                            <constraint firstItem="0VB-zv-0xj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dEc-mT-KdC"/>
                             <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="Cwt-Df-j0s" secondAttribute="trailing" id="eVw-SK-00H"/>
                             <constraint firstItem="LzW-Lg-GMh" firstAttribute="top" secondItem="Vn9-ZM-tVg" secondAttribute="bottom" constant="8" id="fDa-AP-cHV"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Vn9-ZM-tVg" secondAttribute="trailing" id="gqk-w7-IgV"/>
@@ -73,10 +85,18 @@
                             <constraint firstAttribute="trailingMargin" secondItem="jVn-4y-j8H" secondAttribute="trailing" id="wQm-13-SbO"/>
                             <constraint firstItem="Cwt-Df-j0s" firstAttribute="centerY" secondItem="LzW-Lg-GMh" secondAttribute="centerY" id="xp9-uW-rFT"/>
                             <constraint firstItem="Vn9-ZM-tVg" firstAttribute="top" secondItem="jVn-4y-j8H" secondAttribute="bottom" constant="8" id="yKd-lC-68o"/>
+                            <constraint firstItem="jVn-4y-j8H" firstAttribute="top" secondItem="0VB-zv-0xj" secondAttribute="bottom" constant="15" id="zEg-9w-tEj"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="OwL-oT-Kfk"/>
+                            </mask>
+                        </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="imageViewTopConstraint" destination="JbN-aT-qkO" id="8D6-eO-fej"/>
+                        <outlet property="passwordTextField" destination="Vn9-ZM-tVg" id="lm7-P7-sfA"/>
                         <outlet property="saveUserNameLabel" destination="LzW-Lg-GMh" id="YEN-ks-DD3"/>
                     </connections>
                 </viewController>
@@ -85,4 +105,7 @@
             <point key="canvasLocation" x="245" y="350"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="AUTLogoBlack.png" width="1890" height="660"/>
+    </resources>
 </document>
